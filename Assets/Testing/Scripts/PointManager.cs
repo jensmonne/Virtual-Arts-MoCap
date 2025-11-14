@@ -5,6 +5,9 @@ public class PointManager : MonoBehaviour
 {
     public static PointManager Instance;
     [SerializeField] private TMP_Text pointsText;
+    [SerializeField] private GameObject oldpointPrefab;
+    [SerializeField] private GameObject pointGroupPrefab;
+    private bool t;
 
     private void Awake()
     {
@@ -19,6 +22,20 @@ public class PointManager : MonoBehaviour
     public void OnGroupCompleted(PointGroup group)
     {
         Debug.Log($"✅ {group.name} completed!");
-        pointsText.text = "You did it!!! 😁👌";
+        if (!t)
+        {
+            NextPose();
+        }
+        else
+        {
+            pointsText.text = "You did it!!! 😁👌";
+        }
+    }
+
+    private void NextPose()
+    {
+        oldpointPrefab.SetActive(false);
+        pointGroupPrefab.SetActive(true);
+        t = true;
     }
 }
