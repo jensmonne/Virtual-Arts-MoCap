@@ -4,7 +4,7 @@ using UnityEngine;
 public class PoseApplier : MonoBehaviour
 {
     [Tooltip("Root transform of the character skeleton")]
-    public Transform avatarRoot;
+    [SerializeField] private Transform avatarRoot;
 
     private Dictionary<string, Transform> boneMap = new Dictionary<string, Transform>();
 
@@ -13,7 +13,7 @@ public class PoseApplier : MonoBehaviour
         CacheBones();
     }
 
-    public void CacheBones()
+    private void CacheBones()
     {
         boneMap.Clear();
 

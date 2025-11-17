@@ -15,6 +15,9 @@ public class PoseRecorderWindow : EditorWindow
     private int poseIndex = 1;
     
     private bool visualizeBones = true;
+    private bool recordPositionsOnly = false;
+    
+    private const string selectionAssetPath = "Assets/RecordedPoses/BoneSelection.asset";
 
     private void OnEnable()
     {
@@ -68,13 +71,23 @@ public class PoseRecorderWindow : EditorWindow
             ScanBones();
         }
         
+        recordPositionsOnly = EditorGUILayout.ToggleLeft("Record Only Positions (no rotations)", recordPositionsOnly);
         visualizeBones = EditorGUILayout.ToggleLeft("Visualize Selected Bones", visualizeBones);
 
+        GUILayout.Space(10); // keep this here?
+        
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Save Selection"))
+            SaveBoneSelection();
+
+        if (GUILayout.Button("Load Selection"))
+            LoadBoneSelection();
+        EditorGUILayout.EndHorizontal();
+        
         if (allBones.Count == 0)
             return;
         
         EditorGUILayout.BeginHorizontal();
-
         if (GUILayout.Button("Select All", GUILayout.Width(120)))
         {
             for (int i = 0; i < selected.Count; i++)
@@ -90,17 +103,16 @@ public class PoseRecorderWindow : EditorWindow
 
             SceneView.RepaintAll();
         }
-
         EditorGUILayout.EndHorizontal();
         
+        GUILayout.Space(5); // ythis here
+        
         scroll = GUILayout.BeginScrollView(scroll);
-
         for (int i = 0; i < allBones.Count; i++)
         {
             selected[i] = EditorGUILayout.ToggleLeft(allBones[i].name, selected[i]);
             SceneView.RepaintAll();
         }
-
         GUILayout.EndScrollView();
 
         GUILayout.Space(10);
@@ -121,12 +133,49 @@ public class PoseRecorderWindow : EditorWindow
     {
         allBones.Clear();
         selected.Clear();
+        
+        if (avatarRoot == null) return;
 
         foreach (Transform t in avatarRoot.GetComponentsInChildren<Transform>())
         {
             allBones.Add(t);
             selected.Add(false);
         }
+    }
+    
+    private void SaveBoneSelection()
+    {
+        BoneSelection asset = ScriptableObject.CreateInstance<BoneSelection>();
+        List<string> list = new List<string>();
+
+        for (int i = 0; i < allBones.Count; i++)
+            if (selected[i])
+                list.Add(allBones[i].name);
+
+        asset.selectedBones = list.ToArray();
+
+        Directory.CreateDirectory(Path.GetDirectoryName(selectionAssetPath));
+
+        AssetDatabase.CreateAsset(asset, selectionAssetPath);
+        AssetDatabase.SaveAssets();
+
+        Debug.Log("Saved bone selection.");
+    }
+
+    private void LoadBoneSelection()
+    {
+        var asset = AssetDatabase.LoadAssetAtPath<BoneSelection>(selectionAssetPath);
+        if (asset == null)
+        {
+            Debug.LogWarning("No saved selection found.");
+            return;
+        }
+
+        for (int i = 0; i < allBones.Count; i++)
+            selected[i] = System.Array.IndexOf(asset.selectedBones, allBones[i].name) >= 0;
+
+        SceneView.RepaintAll();
+        Debug.Log("Loaded bone selection.");
     }
 
     private void SavePose()
@@ -143,9 +192,21 @@ public class PoseRecorderWindow : EditorWindow
 
         for (int i = 0; i < allBones.Count; i++)
         {
-            if (selected[i])
+            if (!selected[i])
+                continue;
+
+            if (recordPositionsOnly)
             {
-                list.Add(new BonePose()
+                list.Add(new BonePose
+                {
+                    boneName = allBones[i].name,
+                    localPosition = allBones[i].localPosition,
+                    localRotation = Quaternion.identity
+                });
+            }
+            else
+            {
+                list.Add(new BonePose
                 {
                     boneName = allBones[i].name,
                     localPosition = allBones[i].localPosition,
