@@ -12,6 +12,7 @@ public class Point : MonoBehaviour
     private void Start()
     {
         renderer = GetComponent<Renderer>();
+        renderer.material = red;
     }
 
     public void SetGroup(PointGroup pointGroup)
