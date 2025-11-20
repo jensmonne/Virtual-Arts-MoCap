@@ -15,6 +15,8 @@ public class LevelFlowController : MonoBehaviour
 
     private void Start()
     {
+        sceneLoader.Load("Level1");
+        
         if (playerMover == null)
         {
             playerMover = FindAnyObjectByType<PlayerMover>();

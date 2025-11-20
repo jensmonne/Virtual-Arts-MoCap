@@ -496,7 +496,7 @@ PrefabInstance:
     - target: {fileID: 896071049588415186, guid: 5e120e8c71e653a4395654a13008939c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 896071049588415186, guid: 5e120e8c71e653a4395654a13008939c,
         type: 3}
@@ -543,7 +543,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig Full Body
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7106513402395989839, guid: 5e120e8c71e653a4395654a13008939c,
+        type: 3}
+      propertyPath: FadeOnSceneLoaded
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7106513402395989839, guid: 5e120e8c71e653a4395654a13008939c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
