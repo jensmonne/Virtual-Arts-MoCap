@@ -116,7 +116,7 @@ namespace BNG {
                 // We can reduce the fov and disable the camera component for performance
                 var go = new GameObject("CameraCaster");
                 cameraCaster = go.AddComponent<Camera>();
-                cameraCaster.stereoTargetEye = StereoTargetEyeMask.None;
+                //cameraCaster.stereoTargetEye = StereoTargetEyeMask.None;
                 cameraCaster.fieldOfView = 5f;
                 cameraCaster.nearClipPlane = 0.01f;
                 cameraCaster.clearFlags = CameraClearFlags.Nothing;

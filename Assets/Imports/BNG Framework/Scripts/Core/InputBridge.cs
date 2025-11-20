@@ -599,9 +599,9 @@ namespace BNG {
             UpdateDeviceActive();
             UpdateInputs();
 
-            if (Input.GetKeyDown(KeyCode.R)) {
+            /*if (Input.GetKeyDown(KeyCode.R)) {
                 SetTrackingOriginMode(TrackingOrigin);
-            }
+            } */
         }
 
         public virtual void UpdateInputs() {

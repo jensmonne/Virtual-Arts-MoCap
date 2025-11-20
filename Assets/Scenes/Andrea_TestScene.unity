@@ -1082,7 +1082,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1236620992}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6442860222314608828, guid: 1a6ed91d1c19bdb459515d34848d0576,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1195727203}
   m_SourcePrefab: {fileID: 100100000, guid: 1a6ed91d1c19bdb459515d34848d0576, type: 3}
 --- !u!4 &307049080 stripped
 Transform:
@@ -5471,6 +5475,7 @@ GameObject:
   - component: {fileID: 1034802845}
   - component: {fileID: 1034802849}
   - component: {fileID: 1034802850}
+  - component: {fileID: 1034802851}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5588,6 +5593,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee805472840d5843b863535775bbe97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BNG.VRCanvas
+--- !u!114 &1034802851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034802844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f2f6826e3d6f941b41ec1e903f9ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowAxis
+  target: {fileID: 1790748883}
+  followX: 1
+  deadZone: 0.1
+  followSpeed: 20
 --- !u!1 &1037070455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6444,6 +6465,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 307049079}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1195727203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195727202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f2f6826e3d6f941b41ec1e903f9ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowAxis
+  target: {fileID: 1790748883}
+  followX: 1
+  deadZone: 0.1
+  followSpeed: 20
 --- !u!1 &1232310187
 GameObject:
   m_ObjectHideFlags: 0
@@ -9084,7 +9121,7 @@ PrefabInstance:
     - target: {fileID: 896071049588415186, guid: 5e120e8c71e653a4395654a13008939c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 896071049588415186, guid: 5e120e8c71e653a4395654a13008939c,
         type: 3}
@@ -9139,6 +9176,12 @@ PrefabInstance:
 --- !u!4 &1790748882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 896071049588415186, guid: 5e120e8c71e653a4395654a13008939c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1790748881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1790748883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7062797834439998101, guid: 5e120e8c71e653a4395654a13008939c,
     type: 3}
   m_PrefabInstance: {fileID: 1790748881}
   m_PrefabAsset: {fileID: 0}
