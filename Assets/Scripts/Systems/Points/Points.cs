@@ -25,7 +25,7 @@ public class Point : MonoBehaviour
         if (isActive) return;
         isActive = true;
         renderer.material = green;
-        group.OnPointActivated(this);
+        group.OnPointActivated();
     }
 
     private void OnTriggerExit(Collider other)
@@ -33,6 +33,6 @@ public class Point : MonoBehaviour
         if (!isActive) return;
         isActive = false;
         renderer.material = red;
-        group.OnPointDeactivated(this);
+        group.OnPointDeactivated();
     }
 }

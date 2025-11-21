@@ -94,7 +94,7 @@ namespace AscentProtocol.SceneManagement
         /// <summary>
         /// Retrieves a registered SceneObject by ID and casts it to the specified type.
         /// </summary>
-        public static T Get<T>(string objectID) where T : SceneObject
+        public T Get<T>(string objectID) where T : SceneObject
         {
             if (Instance._registeredObjects.TryGetValue(objectID, out SceneObject sceneObject))
                 return sceneObject as T;
@@ -105,7 +105,7 @@ namespace AscentProtocol.SceneManagement
         /// <summary>
         /// Retrieves a registered SceneObject by ID.
         /// </summary>
-        public static SceneObject Get(string objectID)
+        public SceneObject Get(string objectID)
         {
             Instance._registeredObjects.TryGetValue(objectID, out SceneObject sceneObject);
             return sceneObject;

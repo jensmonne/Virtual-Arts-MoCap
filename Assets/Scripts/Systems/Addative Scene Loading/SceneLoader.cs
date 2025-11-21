@@ -35,7 +35,11 @@ namespace AscentProtocol.SceneManagement
         {
             Debug.Log($"Loading scene: {sceneName}");
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-            if (operation == null) Debug.LogWarning($"Loading scene '{sceneName}' failed.");
+            if (operation == null)
+            {
+                Debug.LogWarning($"Loading scene '{sceneName}' failed.");
+                yield break;
+            }
             yield return new WaitUntil(() => operation.isDone);
 
             _loadedScenes.Add(sceneName);

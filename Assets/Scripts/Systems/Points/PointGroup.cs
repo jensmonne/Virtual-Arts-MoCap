@@ -6,6 +6,7 @@ public class PointGroup : MonoBehaviour
     private List<Point> points = new List<Point>();
     private int activeCount = 0;
     private PointManager manager;
+    private bool hasActivated = false;
 
     private void Start()
     {
@@ -15,28 +16,48 @@ public class PointGroup : MonoBehaviour
             points.Add(point);
             point.SetGroup(this);
         }
+        
+        DisablePoints();
     }
     
-    public void OnPointActivated(Point point)
+    public void OnPointActivated()
     {
         activeCount++;
         CheckCompletion();
     }
     
-    public void OnPointDeactivated(Point point)
+    public void OnPointDeactivated()
     {
         activeCount--;
     }
     
     private void CheckCompletion()
     {
-        if (activeCount != points.Count)
+        if (activeCount + 2 != points.Count || hasActivated)
         {
-            Debug.Log($"{activeCount} / {points.Count} Activated");
+            //Debug.Log($"{activeCount} / {points.Count} Activated");
             return;
         }
         
+        hasActivated = true;
+        
         Debug.Log($"Group {name} completed!");
         manager.OnGroupCompleted(this);
+    }
+
+    private void DisablePoints()
+    {
+        foreach (var point in points)
+        {
+            point.gameObject.SetActive(false);
+        }
+    }
+
+    public void EnablePoints()
+    {
+        foreach (var point in points)
+        {
+            point.gameObject.SetActive(true);
+        }
     }
 }

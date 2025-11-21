@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerStop
   layers:
   - Default
   - TransparentFX
@@ -11,8 +12,8 @@ TagManager:
   - Points
   - Water
   - UI
-  - 
-  - 
+  - Colliders
+  - Floor
   - Restricted
   - Player
   - Grabbable

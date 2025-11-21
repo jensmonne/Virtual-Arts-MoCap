@@ -6,7 +6,7 @@ namespace AscentProtocol.SceneManagement
     /// Base component for any object that should be discoverable across scenes.
     /// Automatically registers and unregisters itself with the SceneObjectRegistry.
     /// </summary>
-    public abstract class SceneObject : MonoBehaviour
+    public class SceneObject : MonoBehaviour
     {
         [Tooltip("Unique identifier for this object, used for cross-scene access")]
         [SerializeField] private string objectID = "";
