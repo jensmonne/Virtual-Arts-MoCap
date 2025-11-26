@@ -5,6 +5,7 @@ public class StopTriggers : MonoBehaviour
 {
     [SerializeField] private PointGroup pointGroup;
     [SerializeField] private bool hasGroup = true;
+    [SerializeField] private GameObject canvas;
 
     private void Start()
     {
@@ -19,7 +20,11 @@ public class StopTriggers : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         
         SceneObjectRegistry.Instance.Get("Player").GetComponentInChildren<PlayerMover>().StopMovement();
-        if (pointGroup == null && hasGroup) return;
+        if (!hasGroup)
+        {
+            canvas.SetActive(true);
+            return;
+        }
         pointGroup.EnablePoints();
     }
 }

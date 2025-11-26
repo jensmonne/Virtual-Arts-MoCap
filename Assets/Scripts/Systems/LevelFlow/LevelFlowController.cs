@@ -15,7 +15,7 @@ public class LevelFlowController : MonoBehaviour
 
     private void Start()
     {
-        sceneLoader.Load("Level1");
+        //sceneLoader.Load("Level1");
         
         if (playerMover == null)
         {
@@ -49,14 +49,14 @@ public class LevelFlowController : MonoBehaviour
                     state = FlowState.LoadingNextScene;
                     break;
                 case FlowState.LoadingNextScene:
-                    bool sceneLoaded = false;
+                    /*bool sceneLoaded = false;
                     sceneLoader.Load($"Level{sceneIndex}", () =>
                     {
                         sceneLoaded = true;
                         sceneIndex++;
-                    });
+                    });*/
                     
-                    yield return new WaitUntil(() => sceneLoaded);
+                    //yield return new WaitUntil(() => sceneLoaded);
                     state = FlowState.MovingPlayer;
                     break;
                 case FlowState.MovingPlayer:
