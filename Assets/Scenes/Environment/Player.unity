@@ -576,6 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cba6f2b21d0b924ea9eaf126e5605d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockX
+  allowedRange: 0.2
+  lerpSpeed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
