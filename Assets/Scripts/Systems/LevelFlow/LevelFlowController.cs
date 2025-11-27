@@ -10,12 +10,12 @@ public class LevelFlowController : MonoBehaviour
     [SerializeField] private PlayerMover playerMover;
     
     //private int poseIndex = 0;
-    private int sceneIndex = 2;
+    //private int sceneIndex = 2;
     private bool poseCompleted = false;
 
     private void Start()
     {
-        //sceneLoader.Load("Level1");
+        sceneLoader.Load("Level1");
         
         if (playerMover == null)
         {
