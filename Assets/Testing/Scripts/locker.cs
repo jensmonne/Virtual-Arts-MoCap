@@ -4,7 +4,7 @@ public class LockX : MonoBehaviour
 {
     [Header("Settings")]
     public float allowedRange = 0.2f;
-    public float lerpSpeed = 5f;
+    public float lerpSpeed = 1f;
     
     private void LateUpdate()
     {
