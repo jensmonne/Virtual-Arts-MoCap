@@ -11532,7 +11532,7 @@ GameObject:
   - component: {fileID: 870720879155634956}
   - component: {fileID: 2318715177288760450}
   m_Layer: 0
-  m_Name: XR Rig Full Body
+  m_Name: XRRigFullBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
