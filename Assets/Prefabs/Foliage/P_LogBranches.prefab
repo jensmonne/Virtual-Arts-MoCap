@@ -77,11 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2362ba577e10d904c966ddc79250fc22, type: 2}
+      objectReference: {fileID: 2100000, guid: 68dd1d985f45f4845976ce182ab7c402, type: 2}
     - target: {fileID: 919132149155446097, guid: a3255d4c5f9d89e4ba55a9e3b47f37d7,
         type: 3}
       propertyPath: m_Name
-      value: P_Log_with_branches
+      value: P_LogBranches
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

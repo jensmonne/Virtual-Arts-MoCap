@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3bd1231a78878174f97e2d791c7a964e,
         type: 3}
       propertyPath: m_Name
-      value: P_Tree 1
+      value: P_TreeOak
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3bd1231a78878174f97e2d791c7a964e,
         type: 3}
@@ -253,7 +253,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6762689fafe6965419b862f662b709c5, type: 2}
+  - {fileID: 2100000, guid: 68dd1d985f45f4845976ce182ab7c402, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
