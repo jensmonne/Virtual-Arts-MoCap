@@ -15,7 +15,7 @@ public class LevelFlowController : MonoBehaviour
 
     private void Start()
     {
-        sceneLoader.Load("Level1");
+        sceneLoader.Load("Museum");
         
         if (playerMover == null)
         {
