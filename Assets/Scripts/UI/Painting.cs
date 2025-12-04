@@ -5,6 +5,8 @@ public class Painting : MonoBehaviour
 {
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material material;
+    
+    private Material[] materials;
     private SceneLoader sceneLoader;
 
     public void Start()
@@ -19,11 +21,13 @@ public class Painting : MonoBehaviour
     
     public void OnHoverEnter()
     {
-        meshRenderer.materials[1] = material;
+        var mats = meshRenderer.materials;
+        mats[1] = material;
+        meshRenderer.materials = mats;
     }
 
     public void OnHoverExit()
     {
-        meshRenderer.materials[1] = null;
+        meshRenderer.materials = materials;
     }
 }
