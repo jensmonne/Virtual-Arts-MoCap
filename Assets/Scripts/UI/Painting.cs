@@ -12,6 +12,7 @@ public class Painting : MonoBehaviour
     public void Start()
     {
         sceneLoader = SceneObjectRegistry.Instance.Get("Manager").GetComponent<SceneLoader>();
+        materials = meshRenderer.materials;
     }
     
     public void UILoadWorld()
