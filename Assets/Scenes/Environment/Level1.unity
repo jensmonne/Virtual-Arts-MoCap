@@ -5087,7 +5087,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 10923f0132644c14c82da4066bb06e2a, type: 2}
   m_EnableTreeColliders: 1
@@ -6885,7 +6885,7 @@ PrefabInstance:
     - target: {fileID: 4610655350950281621, guid: 43e2b58814a43c440b55368a9e77034c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.61
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 4610655350950281621, guid: 43e2b58814a43c440b55368a9e77034c,
         type: 3}
@@ -6895,7 +6895,7 @@ PrefabInstance:
     - target: {fileID: 4610655350950281621, guid: 43e2b58814a43c440b55368a9e77034c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 95.42
+      value: 94.56
       objectReference: {fileID: 0}
     - target: {fileID: 4610655350950281621, guid: 43e2b58814a43c440b55368a9e77034c,
         type: 3}
