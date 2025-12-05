@@ -13,7 +13,7 @@ public class StopTriggers : MonoBehaviour
 
     private void Start()
     {
-        if (pointGroup == null)
+        if (pointGroup == null && StopPlayer)
         {
             pointGroup = FindAnyObjectByType<PointGroup>();
         }
