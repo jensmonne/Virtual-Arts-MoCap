@@ -19,6 +19,12 @@ public class PoseApplierEditor : Editor
         {
             var pa = (PoseApplier)target;
             pa.ApplyPose(poseToApply);
+            
+            if (pa != null && pa.avatarRoot != null)
+            {
+                EditorUtility.SetDirty(pa.avatarRoot);
+                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(pa.avatarRoot.gameObject.scene);
+            }
         }
     }
 }

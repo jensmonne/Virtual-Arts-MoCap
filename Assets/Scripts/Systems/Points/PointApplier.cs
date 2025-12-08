@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class PointApplier : MonoBehaviour
 {
-    [SerializeField] private Transform avatarRoot;
+    [SerializeField] public Transform avatarRoot;
     [SerializeField] private GameObject pointPrefab;
 
     private Dictionary<string, Transform> boneMap = new Dictionary<string, Transform>();
