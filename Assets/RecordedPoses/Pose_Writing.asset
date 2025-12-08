@@ -10,45 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3641ace8cd20a6c4a814424796b4c116, type: 3}
-  m_Name: Pose_002
+  m_Name: Pose_Writing
   m_EditorClassIdentifier: Assembly-CSharp::PoseData
   bones:
-  - boneName: spine_02
-    localPosition: {x: -0.20528251, y: -5.32907e-16, z: 1.4126675e-16}
-    localRotation: {x: -1.3552194e-17, y: 3.680525e-17, z: -0.016474828, w: 0.9998643}
   - boneName: upperarm_l
     localPosition: {x: 0.16437945, y: 3.375078e-16, z: 8.5265126e-16}
-    localRotation: {x: -0.073834576, y: 0.6518819, z: 0.17868951, w: -0.7332589}
+    localRotation: {x: 0.13363598, y: -0.6403512, z: -0.2929112, w: 0.6973485}
   - boneName: lowerarm_l
     localPosition: {x: 0.29314366, y: -1.5454305e-15, z: -1.0516033e-14}
-    localRotation: {x: -0.044977363, y: 0.012054306, z: -0.75132173, w: 0.65829134}
+    localRotation: {x: 0.06389721, y: -0.09340137, z: -0.44530383, w: 0.8881992}
   - boneName: hand_l
     localPosition: {x: 0.24279174, y: -4.973799e-16, z: -4.1211477e-15}
     localRotation: {x: -0.24280094, y: 0.17159681, z: -0.1032596, w: 0.94917846}
   - boneName: upperarm_r
     localPosition: {x: -0.16437945, y: -2.3092638e-16, z: -2.842171e-16}
-    localRotation: {x: 0.10685689, y: 0.7206536, z: -0.05723211, w: -0.68261594}
+    localRotation: {x: 0.0033529692, y: -0.5048296, z: -0.35682392, w: 0.78601056}
   - boneName: lowerarm_r
     localPosition: {x: -0.29314366, y: 1.5454305e-15, z: 1.1510792e-14}
-    localRotation: {x: -0.15392432, y: 0.012451616, z: 0.38823238, w: -0.9085306}
+    localRotation: {x: -0.2754851, y: 0.50291026, z: 0.454079, w: -0.6819102}
   - boneName: hand_r
     localPosition: {x: -0.24279174, y: 4.6185276e-16, z: 3.5527137e-15}
     localRotation: {x: -0.2415086, y: 0.18329251, z: -0.10624709, w: 0.9469894}
   - boneName: thigh_l
     localPosition: {x: 0.050335173, y: 0.010559592, z: 0.11295582}
-    localRotation: {x: 0.94001305, y: 0.3152903, z: 0.0004104101, w: 0.13025865}
+    localRotation: {x: -0.9981383, y: -0.0060388623, z: 0.046477284, w: -0.03902822}
   - boneName: calf_l
     localPosition: {x: 0.3358759, y: 1.1046719e-16, z: 3.0571348e-11}
-    localRotation: {x: -0.021178193, y: 0.014528108, z: -0.41409034, w: -0.90987337}
-  - boneName: foot_l
-    localPosition: {x: 0.3958001, y: -3.907985e-16, z: 2.1878747e-11}
-    localRotation: {x: 0.024857476, y: -0.19053723, z: -0.1718706, w: 0.9661978}
+    localRotation: {x: 0.006429559, y: -0.00355997, z: 0.16335474, w: 0.9865401}
   - boneName: thigh_r
     localPosition: {x: 0.050335173, y: 0.010559592, z: -0.11295582}
-    localRotation: {x: -0.074981436, y: -0.9916245, z: -0.09877995, w: 0.03607281}
+    localRotation: {x: -0.0633718, y: 0.99424857, z: 0.042808317, w: -0.07497479}
   - boneName: calf_r
     localPosition: {x: -0.3358759, y: 1.7432417e-10, z: -3.0571632e-11}
-    localRotation: {x: 0.0006799792, y: -0.009617982, z: 0.33331212, w: 0.9427672}
-  - boneName: foot_r
-    localPosition: {x: -0.3958001, y: 2.0542605e-10, z: -3.551886e-11}
-    localRotation: {x: -0.18975335, y: 0.09392533, z: 0.39179376, w: -0.8953599}
+    localRotation: {x: 0.0006147275, y: -0.009106781, z: 0.32026243, w: 0.94728494}
