@@ -19,12 +19,24 @@ public class PointApplierEditor : Editor
         {
             var pa = (PointApplier)target;
             pa.SpawnPoints(poseToApply);
+            
+            if (pa != null && pa.avatarRoot != null)
+            {
+                EditorUtility.SetDirty(pa.avatarRoot);
+                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(pa.avatarRoot.gameObject.scene);
+            }
         }
         
         if (GUILayout.Button("Remove Points"))
         {
             var pa = (PointApplier)target;
             pa.ClearPoints();
+            
+            if (pa != null && pa.avatarRoot != null)
+            {
+                EditorUtility.SetDirty(pa.avatarRoot);
+                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(pa.avatarRoot.gameObject.scene);
+            }
         }
     }
 }

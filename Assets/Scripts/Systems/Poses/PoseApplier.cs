@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class PoseApplier : MonoBehaviour
 {
     [Tooltip("Root transform of the character skeleton")]
-    [SerializeField] private Transform avatarRoot;
+    [SerializeField] public Transform avatarRoot;
 
     private Dictionary<string, Transform> boneMap = new Dictionary<string, Transform>();
 
