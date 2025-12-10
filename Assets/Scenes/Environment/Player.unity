@@ -317,8 +317,6 @@ GameObject:
   - component: {fileID: 484730160}
   - component: {fileID: 484730159}
   - component: {fileID: 484730158}
-  - component: {fileID: 484730164}
-  - component: {fileID: 484730163}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -393,49 +391,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &484730163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484730157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: e39f4b35a6db18348b41eb0262520e69,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Generic XR Controller
-  m_DefaultActionMap: 7960f8ef-2bf3-4281-aecc-4c03809d6c8c
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &484730164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484730157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e7ffca2f3d46c438e7d5c575d1f6c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRPause
 --- !u!1 &488529589
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,8 @@ public class Painting : MonoBehaviour
         {
             sceneLoader.Load("Level2", () =>
             {
-                sceneLoader.Unload("Museum");
+                sceneLoader.Unload("Museum", () => 
+                    SceneObjectRegistry.Instance.Get("Player").GetComponentInChildren<PlayerMover>().MovePlayer());
             });
         });
     }

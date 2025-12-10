@@ -2,18 +2,8 @@ using UnityEngine;
 
 public class Point : MonoBehaviour
 {
-    [SerializeField] private Material red;
-    [SerializeField] private Material green;
-    
-    private new Renderer renderer;
     private bool isActive;
     private PointGroup group;
-    
-    private void Start()
-    {
-        renderer = GetComponent<Renderer>();
-        renderer.material = red;
-    }
 
     public void SetGroup(PointGroup pointGroup)
     {
@@ -24,7 +14,6 @@ public class Point : MonoBehaviour
     {
         if (isActive) return;
         isActive = true;
-        renderer.material = green;
         group.OnPointActivated();
     }
 
@@ -32,7 +21,6 @@ public class Point : MonoBehaviour
     {
         if (!isActive) return;
         isActive = false;
-        renderer.material = red;
         group.OnPointDeactivated();
     }
 }
