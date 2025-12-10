@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f2f6826e3d6f941b41ec1e903f9ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowAxis
-  target: {fileID: 0}
+  target: {fileID: 926523736}
   followX: 1
   deadZone: 0.1
   followSpeed: 20
