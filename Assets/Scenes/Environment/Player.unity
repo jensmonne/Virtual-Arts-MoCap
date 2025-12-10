@@ -1153,7 +1153,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4035090144119944625, guid: 8d03ecb37afc7424aa49d3e1219a75a5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 926523734}
+      addedObject: {fileID: 926523741}
     - targetCorrespondingSourceObject: {fileID: 8379847299708935888, guid: 8d03ecb37afc7424aa49d3e1219a75a5,
         type: 3}
       insertIndex: -1
@@ -1217,18 +1217,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 926523731}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &926523734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926523733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e7ffca2f3d46c438e7d5c575d1f6c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRPause
 --- !u!114 &926523735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1309,7 @@ MonoBehaviour:
     m_ActionName: 'XR LeftHand/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 926523734}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VRPause, Assembly-CSharp
         m_MethodName: PauseNow
         m_Mode: 1
@@ -1410,6 +1398,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 926523731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &926523741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926523733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f2f6826e3d6f941b41ec1e903f9ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowAxis
+  target: {fileID: 0}
+  followX: 1
+  deadZone: 0.1
+  followSpeed: 20
 --- !u!1 &926699423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 267985400432610808, guid: 8d03ecb37afc7424aa49d3e1219a75a5,
