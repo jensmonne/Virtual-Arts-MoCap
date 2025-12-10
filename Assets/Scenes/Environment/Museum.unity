@@ -2418,7 +2418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5cc7e6d59d1b148aacb41730f716b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadWorld
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 1372222781}
   material: {fileID: 2100000, guid: a5d2d99f516d4d942b589642dce8224f, type: 2}
 --- !u!114 &650205725
 MonoBehaviour:
@@ -4417,6 +4417,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5939051232558313672, guid: 63aa4b5284fe4424ab7cd41628f41528,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6486140163112690066, guid: 63aa4b5284fe4424ab7cd41628f41528,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4447,6 +4452,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.856
       objectReference: {fileID: 0}
+    - target: {fileID: 7803196297334180277, guid: 63aa4b5284fe4424ab7cd41628f41528,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4459,6 +4469,12 @@ PrefabInstance:
 --- !u!4 &1372222780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7422307243616310031, guid: 63aa4b5284fe4424ab7cd41628f41528,
+    type: 3}
+  m_PrefabInstance: {fileID: 1372222779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1372222781 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8595816705430710368, guid: 63aa4b5284fe4424ab7cd41628f41528,
     type: 3}
   m_PrefabInstance: {fileID: 1372222779}
   m_PrefabAsset: {fileID: 0}
