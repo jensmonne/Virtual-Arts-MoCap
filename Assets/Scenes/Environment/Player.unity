@@ -1059,6 +1059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig Full Body_Rokoko_XR
       objectReference: {fileID: 0}
+    - target: {fileID: 5290235994908409622, guid: 8d03ecb37afc7424aa49d3e1219a75a5,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6094446306896981098, guid: 8d03ecb37afc7424aa49d3e1219a75a5,
         type: 3}
       propertyPath: m_LocalPosition.x
