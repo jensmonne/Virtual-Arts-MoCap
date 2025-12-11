@@ -9,8 +9,8 @@ public class EndReturn : MonoBehaviour
     {
         sceneLoader = FindAnyObjectByType<SceneLoader>();
     }
-    
-    private void OnTriggerEnter(Collider other)
+
+    public void ReturnToMenu()
     {
         sceneLoader.Load("Museum", () => sceneLoader.Unload("Level2"));
     }
