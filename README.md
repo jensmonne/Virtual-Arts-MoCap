@@ -21,8 +21,6 @@ We were given the opportunity to experiment with this hardware and explore its p
 
 Although the suit is typically used for animation and performance capture, we successfully repurposed it into an interactive gameplay mechanic, proving that motion capture technology can also create engaging, educational, and playful experiences.
 
-## Video (To be Released)
-
 ## Pictures
 <img width="1301" height="683" alt="Screenshot_2025-12-12_134520" src="https://github.com/user-attachments/assets/52871b64-6591-4b61-a6d7-f77c1142ae6f" />
 <img width="955" height="691" alt="Screenshot_2025-12-12_134307" src="https://github.com/user-attachments/assets/d069513e-8c09-45cf-bb8c-c24849ae8ecd" />
